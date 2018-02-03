@@ -1,0 +1,104 @@
+
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+  color:#ffffff;
+}
+header, nav, main, footer, aside, section, article,p{
+	display:block;
+}
+
+body{
+  font-family: 'Alef', sans-serif;
+}
+
+header{
+  height:258px;
+  width: 100%;
+
+}
+#wrapper_index,#wrapper_login{
+  margin: 0 auto;
+}
+#wrapper_index section header #logo,#wrapper_login section header #logo{
+  width:258px;
+  height: 258px;
+  display:block;
+  margin: 0 auto;
+  padding-top: 33px;
+  background: url('../images/Logo_big.png') no-repeat left top;
+}
+#wrapper_index section,#wrapper_login section{
+    background-color: #EEEEEE;
+    margin:0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    height: 565px;
+    width: 468px;
+    box-shadow: 30px 0 40px -10px #777777;
+}
+#wrapper_login section main form article{
+  padding-left: 37px;
+}
+#wrapper_index section{
+text-align: center;
+}
+#wrapper_index section main a,#wrapper_login section main form button{
+  display:block;
+  background:#62c462;
+  opacity:0.73;
+  border-radius: 25px;
+  width: 215px;
+  margin:0 auto;
+  padding: 10px;
+  font-size: 20px;
+  color:#ffffff;
+  font-family: 'Alef', sans-serif;
+}
+#wrapper_login section main form button{
+padding: 10px;
+width: 245px;
+margin-top:52px;
+}
+#wrapper_index section main a:hover,#wrapper_login section main form button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#wrapper_login section form article input{
+  border:0;
+  border-radius: 15px;
+  width: 300px;
+  height: 18px;
+  margin:0 auto;
+  padding: 15px;
+  font-size: 14px;
+}
+#wrapper_login section form article input:first-of-type{
+  margin-bottom: 34px;
+}
+#wrapper_index section a:first-child{
+  margin-bottom:34px;
+  margin-top:110px;
+}
+#wrapper_login section main form article span{
+  margin-bottom: 5px;
+  display: block;
+  padding-left: 1px;
+}
+#bad_login{
+  color:#ee5f5b;
+  font-size: 15px;
+
+}
+@media (max-width: 600px) {
+#wrapper_index section, #wrapper_login section {
+  border-radius: 0;
+  margin:0;
+  width: 100%;
+  height: 700px;
+  box-shadow:0;
+}

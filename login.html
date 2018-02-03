@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wise Library</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Alef" rel="stylesheet">
+    <link rel="stylesheet" href="includes/style.css">
+    <script src="includes/db.json"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="includes/scripts.js"></script>
+  </head>
+  <body>
+    <div id="wrapper_login">
+      <section>
+        <header>
+          <a href="index.html" id="logo"></a>
+        </header>
+        <main>
+          <form action="home.php" method="post">
+            <article>
+              <span id="bad_login">
+                Your Username/Password combination was incorrect
+              </span>
+              <span>Email address:</span>
+              <input type="text" placeholder="Enter Email address" name="email" required>
+              <span>Password:</span>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+            </article>
+            <button type="submit" id="login_btn">Login</button>
+          </form>
+        </main>
+      </section>
+      <footer>
+      </footer>
+    </div>
+</body>
+</html>
