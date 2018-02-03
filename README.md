@@ -1,3 +1,0 @@
-# WebArt
-# WiseLibrary
-# WiseLibrary
