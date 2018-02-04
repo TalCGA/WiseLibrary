@@ -10,26 +10,27 @@ $(document).ready(function(){
     var b=$("#psw").val();
     var checkval = false;
 
-    $.getJSON('db.json', function(data)
+    $.getJSON('data/db.json', function(data)
     {
-      console.log("bla bla bla0");
-        $.each(data,function(i,obj)
-        {
-            if(obj.email == a && obj.psw == b)
-            {
-                checkval = true;
-                return false;
-            }
-        });
-         if(checkval == true)
-        {
-            alert("login correct");
-            console.log("bla bla bla2");
-        }
-    else
-        {
-          $("#bad_login").show();
-        }
+      console.log(data);
+    //     $.each(data,function(i,obj)
+    //     {
+    //         if(obj.email == a && obj.psw == b)
+    //         {
+    //             checkval = true;
+    //             return false;
+    //         }
+    //
+    //     });
+    //      if(checkval == true)
+    //     {
+    //         alert("login correct");
+    //         console.log("bla bla bla2");
+    //     }
+    // else
+    //     {
+    //       $("#bad_login").show();
+    //     }
 
     });
 

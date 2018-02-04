@@ -92,7 +92,7 @@ margin-top:52px;
 #bad_login{
   color:#ee5f5b;
   font-size: 15px;
-
+  display:none;
 }
 @media (max-width: 600px) {
 #wrapper_index section, #wrapper_login section {
