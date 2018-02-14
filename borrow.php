@@ -4,14 +4,8 @@
     session_start();
     if(!isset($_SESSION['first_name']))
         header('Location:login.php');
-    // $query  = "SELECT books_249.name, books_249.auther, books_249.image, genre_book_249.genre_id
-    // FROM 'books_249' INNER JOIN 'genre_book_249'
-    // ON a.id=b.book_id;";
-    // $query  = "SELECT name, auther, image
-    // FROM 'books_249' ;";
-    // INNER JOIN 'genre_book_249' AS
-    // p ON u.id = p.book_id
-    $query  = "SELECT u.name,u.id, u.auther, u.image, i.name
+
+    $query  = "SELECT u.name,u.id, u.auther, u.image, i.genre_name
     FROM `books_249` AS u INNER JOIN `genre_book_249` AS p
     ON u.id=p.book_id
     INNER JOIN `book_genre_249` AS i
@@ -30,15 +24,13 @@
           ."<a href='book.php?id=" . $row["id"] . "'><h3>"
           . $row["name"] . "/</h3><h4>".$row["auther"]."</h4></a>"
           . "</article>";
-          $geners.="<option value='".$row["name"]."' name='".$row["name"]."'>";
+          $geners.="<option value='".$row["genre_name"]."' value='book_category'>";
     }
     $books.="</article>";
 
-    //
-    //
-    // while($row = mysqli_fetch_assoc($model2))
-    //       $geners.=$row["name"]."' name='".$row["name"]."'>";
-?>
+
+    $_SESSION['book_category']=$_POST['browsers'];
+  ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -65,11 +57,11 @@
         <main  id="borrow_page">
           <article id="main_mobile">
             <section>
-              <form action="borrow1.php" method="post">
+              <form action="borrow1.php" method="POST">
                 <input type="text" name="by_name" placeholder="Search by book name">
                 <input type="text" name="by_auther" placeholder="Search by an auther">
                 <input list="browsers" name="by_category" placeholder="Search by an category">
-                  <datalist id="browsers">
+                  <datalist id="browsers" name="browsers">
                     <?php echo $geners; ?>
                   </datalist>
               <input type="submit" value="">

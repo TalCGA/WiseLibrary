@@ -4,13 +4,6 @@
     session_start();
     if(!isset($_SESSION['first_name']))
         header('Location:login.php');
-    // $query  = "SELECT books_249.name, books_249.auther, books_249.image, genre_book_249.genre_id
-    // FROM 'books_249' INNER JOIN 'genre_book_249'
-    // ON a.id=b.book_id;";
-    // $query  = "SELECT name, auther, image
-    // FROM 'books_249' ;";
-    // INNER JOIN 'genre_book_249' AS
-    // p ON u.id = p.book_id
     $query  = "SELECT u.name,u.id, u.auther, u.image, p.genre_id
     FROM `books_249` AS u INNER JOIN `genre_book_249` AS
     p ON p.book_id = u.id
@@ -105,7 +98,7 @@
           </article>
           <article id="main_mobile">
             <h2>Recommended books:</h2>
-            <section class="section_mobile" ><image src="images/i_drama.png" alt="Drama">Drama</section>
+            <section class="section_mobile" ><image src="images/i_Drama.png" alt="Drama">Drama</section>
               <?php echo $genre1; ?>
             <section class="section_mobile"><image src="images/i_computer_science.png" alt="Computer Science">Computer Science</section>
               <?php echo $genre2; ?>

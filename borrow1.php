@@ -4,8 +4,9 @@
     session_start();
     if(!isset($_SESSION['first_name']))
         header('Location:login.php');
+        echo $_SESSION['book_category']."<br>";
 
-    $query  = "SELECT u.name,u.id, u.auther, u.image, i.name
+    $query  = "SELECT u.name,u.id, u.auther, u.image, i.genre_name
     FROM `books_249` AS u INNER JOIN `genre_book_249` AS p
     ON u.id=p.book_id
     INNER JOIN `book_genre_249` AS i
@@ -16,11 +17,11 @@
         die("DB query failed.");
     }
 
-echo $books;
     // Adding the books randomly and Adding the genre to combolist
     $books = "<article class='book_list'>";
+
     while($row = mysqli_fetch_assoc($model)) {
-        if($books['name']==$_SESSION['by_category']){
+        if($row['genre_name']==$_SESSION['book_category']){
 
           $books.="<article><img src='".$row["image"]."'>"
           ."<a href='book.php?id=" . $row["id"] . "'><h3>"
@@ -29,6 +30,7 @@ echo $books;
         }
           $geners.="<option value='".$row["name"]."' name='".$row["name"]."'>";
     }
+
     $books.="</article>";
 
 
@@ -46,6 +48,7 @@ echo $books;
 
   </head>
   <body>
+
     <section id="device_background">
       <div id="wrapper_home">
         <header id="header_append">

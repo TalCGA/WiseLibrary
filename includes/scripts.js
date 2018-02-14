@@ -1,44 +1,13 @@
 
 $("document").ready(function(){
   checkSize();
-  // $('#login_btn').click(function(){
-  //   var email=$('#email').val();
-  //   var psw=$('#psw').val();
-  //   var checkval = false;
-  //   $.ajax({
-  //     type:"POST",
-  //     url:"data/users.json",
-  //     dataType:"json",
-  //     success:function(data){
-  //       $.each(data,function(i,obj){
-  //         if(obj.email == email && obj.password == psw)
-  //         {
-  //             checkval = true;
-  //             return false;
-  //         }
-  //       });
-  //       if(checkval){
-  //         document.location="home.php?email="+email;
-  //
-  //       }
-  //       else{
-  //         $("#bad_login").show();
-  //         $('#email').val('');
-  //         $('#psw').val('');
-  //       }
-  //    }
-  //   });
-  //  return false;
-
-
 
 
 });
-// +$(location).attr('pathname').replace('.php','')+
 function checkSize(){
     if ($("#wrapper_home").css("width") == "360px" ){
       $("#nav_bar").html("<img id='menu_tap' src='images/menu.png' alt='Menu Logo'>");
-      $("#nav_bar").append("<h1>Home</h1>");
+      $("#nav_bar").append("<h1>" +$(location).attr('pathname').replace('/2017-2018/html5/dev_249/','').replace('.php','')+"</h1>");
         $("#menu_tap").on("click", function () {
               $("#nav_bar").append("<ul>"+
                 "<li><img src='images/yam_profile.png'></li>"

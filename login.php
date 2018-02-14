@@ -17,7 +17,7 @@
            $_SESSION['first_name']=$row['first_name'];
            $_SESSION['user_id']=$row['id'];
            $_SESSION['profile_img']=$row['profile_img'];
-           header('Location: http://localhost/~Tal/WiseLibrary/home.php');
+           header('Location: home.php');
         } else {
          $message="Invalid UserName or Password!";
          }
