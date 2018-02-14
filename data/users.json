@@ -1,8 +1,6 @@
 {
-  "users":[
-    {
-  "email":"anat_chaushu@gmail.com",
-  "psw": "123456789"
-}
-]
+    "1":{
+      "email":"anat_chaushu@gmail.com",
+      "password": "123456789"
+    }
 }
